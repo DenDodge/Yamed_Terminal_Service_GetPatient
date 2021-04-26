@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="srz_miniModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PEOPLE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FAM" Type="varchar" MaxLength="40" />
+          <Property Name="IM" Type="varchar" MaxLength="40" />
+          <Property Name="OT" Type="varchar" MaxLength="40" />
+          <Property Name="W" Type="int" />
+          <Property Name="DR" Type="datetime" />
+          <Property Name="CN" Type="varchar" MaxLength="3" />
+          <Property Name="DS" Type="datetime" />
+          <Property Name="RN" Type="varchar" MaxLength="11" />
+          <Property Name="INDX" Type="varchar" MaxLength="6" />
+          <Property Name="RNNAME" Type="varchar" MaxLength="80" />
+          <Property Name="CITY" Type="varchar" MaxLength="80" />
+          <Property Name="NP" Type="varchar" MaxLength="80" />
+          <Property Name="UL" Type="varchar" MaxLength="80" />
+          <Property Name="DOM" Type="varchar" MaxLength="12" />
+          <Property Name="KOR" Type="varchar" MaxLength="12" />
+          <Property Name="KV" Type="varchar" MaxLength="12" />
+          <Property Name="Q" Type="varchar" MaxLength="5" />
+          <Property Name="SPOL" Type="varchar" MaxLength="20" />
+          <Property Name="NPOL" Type="varchar" MaxLength="20" />
+          <Property Name="ENP" Type="varchar" MaxLength="16" />
+          <Property Name="OPDOC" Type="int" />
+          <Property Name="DBEG" Type="datetime" />
+          <Property Name="DEND" Type="datetime" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="DSTOP" Type="datetime" />
+          <Property Name="DOCTP" Type="varchar" MaxLength="3" />
+          <Property Name="DOCS" Type="varchar" MaxLength="20" />
+          <Property Name="DOCN" Type="varchar" MaxLength="20" />
+          <Property Name="MR" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="srz_miniModelStoreContainer">
+          <EntitySet Name="PEOPLE" EntityType="Self.PEOPLE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="srz_miniModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PEOPLE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FAM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="IM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="OT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="W" Type="Int32" />
+          <Property Name="DR" Type="DateTime" Precision="3" />
+          <Property Name="CN" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="DS" Type="DateTime" Precision="3" />
+          <Property Name="RN" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="INDX" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="RNNAME" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CITY" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="NP" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="UL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="DOM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="KOR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="KV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Q" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SPOL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NPOL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ENP" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="OPDOC" Type="Int32" />
+          <Property Name="DBEG" Type="DateTime" Precision="3" />
+          <Property Name="DEND" Type="DateTime" Precision="3" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="DSTOP" Type="DateTime" Precision="3" />
+          <Property Name="DOCTP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="DOCS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DOCN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="srz_miniEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PEOPLE" EntityType="Self.PEOPLE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="srz_miniModelStoreContainer" CdmEntityContainer="srz_miniEntities1">
+          <EntitySetMapping Name="PEOPLE">
+            <EntityTypeMapping TypeName="srz_miniModel.PEOPLE">
+              <MappingFragment StoreEntitySet="PEOPLE">
+                <ScalarProperty Name="FAM" ColumnName="FAM" />
+                <ScalarProperty Name="IM" ColumnName="IM" />
+                <ScalarProperty Name="OT" ColumnName="OT" />
+                <ScalarProperty Name="W" ColumnName="W" />
+                <ScalarProperty Name="DR" ColumnName="DR" />
+                <ScalarProperty Name="CN" ColumnName="CN" />
+                <ScalarProperty Name="DS" ColumnName="DS" />
+                <ScalarProperty Name="RN" ColumnName="RN" />
+                <ScalarProperty Name="INDX" ColumnName="INDX" />
+                <ScalarProperty Name="RNNAME" ColumnName="RNNAME" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="NP" ColumnName="NP" />
+                <ScalarProperty Name="UL" ColumnName="UL" />
+                <ScalarProperty Name="DOM" ColumnName="DOM" />
+                <ScalarProperty Name="KOR" ColumnName="KOR" />
+                <ScalarProperty Name="KV" ColumnName="KV" />
+                <ScalarProperty Name="Q" ColumnName="Q" />
+                <ScalarProperty Name="SPOL" ColumnName="SPOL" />
+                <ScalarProperty Name="NPOL" ColumnName="NPOL" />
+                <ScalarProperty Name="ENP" ColumnName="ENP" />
+                <ScalarProperty Name="OPDOC" ColumnName="OPDOC" />
+                <ScalarProperty Name="DBEG" ColumnName="DBEG" />
+                <ScalarProperty Name="DEND" ColumnName="DEND" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DSTOP" ColumnName="DSTOP" />
+                <ScalarProperty Name="DOCTP" ColumnName="DOCTP" />
+                <ScalarProperty Name="DOCS" ColumnName="DOCS" />
+                <ScalarProperty Name="DOCN" ColumnName="DOCN" />
+                <ScalarProperty Name="MR" ColumnName="MR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

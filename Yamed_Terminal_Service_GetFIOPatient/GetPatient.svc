@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Yamed_Terminal_Service_GetPatient.Yamed_Service" CodeBehind="GetPatient.svc.cs" %>
